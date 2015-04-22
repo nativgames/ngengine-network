@@ -1,0 +1,551 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="95">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <logicalFolder name="Modules"
+                   displayName="Modules"
+                   projectFiles="true"
+                   root="/usr/share/cmake-2.8/Modules">
+      <itemPath>/usr/share/cmake-2.8/Modules/CMakeCCompilerABI.c</itemPath>
+      <itemPath>/usr/share/cmake-2.8/Modules/CMakeCXXCompilerABI.cpp</itemPath>
+      <itemPath>/usr/share/cmake-2.8/Modules/CMakeCompilerABI.h</itemPath>
+    </logicalFolder>
+    <df root="../../.." name="0">
+      <df name="build">
+        <df name="cmake">
+          <df name="CMakeFiles">
+            <df name="2.8.12.2">
+              <df name="CompilerIdC">
+                <in>CMakeCCompilerId.c</in>
+              </df>
+              <df name="CompilerIdCXX">
+                <in>CMakeCXXCompilerId.cpp</in>
+              </df>
+            </df>
+          </df>
+        </df>
+      </df>
+      <df name="include">
+        <df name="ngengine">
+          <df name="network">
+            <df name="connection">
+              <df name="tcp">
+                <df name="client">
+                  <in>client.h</in>
+                </df>
+                <df name="server">
+                  <in>server.h</in>
+                </df>
+              </df>
+            </df>
+            <df name="serializer">
+              <df name="json">
+                <in>serializer.h</in>
+              </df>
+              <df name="raw">
+                <in>serializer.h</in>
+              </df>
+            </df>
+            <in>client.h</in>
+          </df>
+        </df>
+      </df>
+      <df name="src">
+        <df name="nge-orm-utils">
+          <in>entity.cpp</in>
+          <in>generator.cpp</in>
+          <in>main.cpp</in>
+        </df>
+        <df name="ngengine">
+          <df name="network">
+            <df name="connection">
+              <df name="tcp">
+                <df name="client">
+                  <in>client.cpp</in>
+                </df>
+                <df name="server">
+                  <in>client.cpp</in>
+                  <in>server.cpp</in>
+                </df>
+              </df>
+            </df>
+            <in>client.cpp</in>
+            <in>network.cpp</in>
+          </df>
+          <df name="orm">
+            <df name="database">
+              <df name="connections">
+                <in>sqlite3.cpp</in>
+              </df>
+              <df name="query_builders">
+                <in>sqlite3.cpp</in>
+              </df>
+              <in>connection.cpp</in>
+              <in>query_builder.cpp</in>
+              <in>tuple.cpp</in>
+            </df>
+            <df name="serializer">
+              <in>serializer.cpp</in>
+            </df>
+            <in>entity.cpp</in>
+            <in>orm.cpp</in>
+          </df>
+        </df>
+        <df name="orm">
+          <df name="connections">
+            <in>sqlite3.cpp</in>
+          </df>
+          <df name="database">
+            <df name="connections">
+              <in>sqlite3.cpp</in>
+            </df>
+            <df name="query_builders">
+              <in>sqlite3.cpp</in>
+            </df>
+            <in>connection.cpp</in>
+            <in>query_builder.cpp</in>
+          </df>
+          <df name="serializer">
+            <in>serializer.cpp</in>
+          </df>
+          <in>entity.cpp</in>
+          <in>orm.cpp</in>
+          <in>query_builder.cpp</in>
+        </df>
+      </df>
+      <df name="tests">
+        <df name="runner">
+          <in>main.cpp</in>
+        </df>
+        <df name="tests">
+          <df name="orm">
+            <df name="database">
+              <df name="connections">
+                <df name="sqlite3">
+                  <in>main.cpp</in>
+                  <in>my_2nd_entity.cpp</in>
+                  <in>myentity.cpp</in>
+                </df>
+                <df name="tests">
+                  <df name="tuple">
+                    <in>main.cpp</in>
+                    <in>tuple_tester.cpp</in>
+                  </df>
+                </df>
+              </df>
+              <df name="sqlite3">
+                <in>main.cpp</in>
+              </df>
+            </df>
+          </df>
+        </df>
+      </df>
+    </df>
+    <df root="../../.." name="1">
+    </df>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>../Makefile</itemPath>
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>../Makefile</itemPath>
+    </logicalFolder>
+    <itemPath>../../externals/Makefile</itemPath>
+    <itemPath>../../../tests/tests/orm/database/connections/sqlite3/my2ndEntity.yml</itemPath>
+  </logicalFolder>
+  <sourceFolderFilter>^(nbproject)$</sourceFolderFilter>
+  <sourceRootList>
+    <Elem>../../..</Elem>
+    <Elem>../../..</Elem>
+  </sourceRootList>
+  <projectmakefile>../Makefile</projectmakefile>
+  <confs>
+    <conf name="Default" type="0">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>false</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <flagsDictionary>
+        <element flagsID="0" commonFlags="-std=c++11 -m64"/>
+      </flagsDictionary>
+      <codeAssistance>
+      </codeAssistance>
+      <makefileType>
+        <makeTool>
+          <buildCommandWorkingDir>..</buildCommandWorkingDir>
+          <buildCommand>${MAKE} -f Makefile</buildCommand>
+          <cleanCommand>${MAKE} -f Makefile clean</cleanCommand>
+          <executablePath></executablePath>
+          <cTool>
+            <standard>10</standard>
+            <incDir>
+              <pElem>../../../include</pElem>
+            </incDir>
+          </cTool>
+          <ccTool>
+            <standard>8</standard>
+          </ccTool>
+        </makeTool>
+      </makefileType>
+      <item path="../../../include/ngengine/network/client.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="../../../include/ngengine/network/connection/tcp/client/client.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="../../../include/ngengine/network/connection/tcp/server/server.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="../../../include/ngengine/network/serializer/json/serializer.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="../../../include/ngengine/network/serializer/raw/serializer.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="../../../src/nge-orm-utils/entity.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="../../../src/nge-orm-utils/generator.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="../../../src/nge-orm-utils/main.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="../../../src/ngengine/network/client.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="../../../src/ngengine/network/connection/tcp/client/client.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="../../../src/ngengine/network/connection/tcp/server/client.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="../../../src/ngengine/network/connection/tcp/server/server.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="../../../src/ngengine/network/network.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+      </item>
+      <item path="../../../src/ngengine/orm/database/connection.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="../../../src/ngengine/orm/database/connections/sqlite3.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="../../../src/ngengine/orm/database/query_builder.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="../../../src/ngengine/orm/database/query_builders/sqlite3.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="../../../src/ngengine/orm/database/tuple.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+      </item>
+      <item path="../../../src/ngengine/orm/entity.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="../../../src/ngengine/orm/orm.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="../../../src/ngengine/orm/serializer/serializer.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="../../../src/orm/connections/sqlite3.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="../../../src/orm/database/connection.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="../../../src/orm/database/connections/sqlite3.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="../../../src/orm/database/query_builder.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="../../../src/orm/database/query_builders/sqlite3.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="../../../src/orm/entity.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+          <incDir>
+            <pElem>/usr/dev/include</pElem>
+            <pElem>../../cmake</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="../../../src/orm/orm.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+          <incDir>
+            <pElem>/usr/dev/include</pElem>
+            <pElem>../../cmake</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="../../../src/orm/query_builder.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool>
+          <incDir>
+            <pElem>../../../tests/tests</pElem>
+            <pElem>../../cmake</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="../../../src/orm/serializer/serializer.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="../../../tests/runner/main.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="../../../tests/tests/orm/database/connections/sqlite3/main.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="../../../tests/tests/orm/database/connections/sqlite3/my_2nd_entity.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="../../../tests/tests/orm/database/connections/sqlite3/myentity.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="../../../tests/tests/orm/database/connections/tests/tuple/main.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="../../../tests/tests/orm/database/connections/tests/tuple/tuple_tester.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="../../../tests/tests/orm/database/sqlite3/main.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="../../cmake/CMakeFiles/2.8.12.2/CompilerIdC/CMakeCCompilerId.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="../../cmake/CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="/usr/share/cmake-2.8/Modules/CMakeCCompilerABI.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="/usr/share/cmake-2.8/Modules/CMakeCXXCompilerABI.cpp"
+            ex="false"
+            tool="1"
+            flavor2="4">
+      </item>
+      <folder path="0">
+        <ccTool>
+          <incDir>
+            <pElem>../../../include</pElem>
+          </incDir>
+        </ccTool>
+      </folder>
+      <folder path="0/src/nge-orm-utils">
+        <ccTool>
+          <incDir>
+            <pElem>/usr/dev/include</pElem>
+            <pElem>../../../externals/jsoncpp/include</pElem>
+            <pElem>../../../externals/yaml-cpp/include</pElem>
+            <pElem>../../cmake</pElem>
+          </incDir>
+        </ccTool>
+      </folder>
+      <folder path="0/src/ngengine">
+        <ccTool>
+          <incDir>
+            <pElem>/usr/dev/include</pElem>
+            <pElem>../../cmake</pElem>
+          </incDir>
+        </ccTool>
+      </folder>
+      <folder path="0/src/orm/connections">
+        <ccTool>
+          <incDir>
+            <pElem>../../../tests/tests</pElem>
+            <pElem>../../cmake</pElem>
+          </incDir>
+        </ccTool>
+      </folder>
+      <folder path="0/src/orm/database">
+        <ccTool>
+          <incDir>
+            <pElem>/usr/dev/include</pElem>
+            <pElem>../../cmake</pElem>
+          </incDir>
+        </ccTool>
+      </folder>
+      <folder path="0/src/orm/serializer">
+        <ccTool>
+          <incDir>
+            <pElem>/usr/dev/include</pElem>
+            <pElem>../../cmake</pElem>
+          </incDir>
+        </ccTool>
+      </folder>
+      <folder path="0/tests/runner">
+        <ccTool>
+          <incDir>
+            <pElem>/usr/dev/include</pElem>
+            <pElem>../../cmake</pElem>
+          </incDir>
+        </ccTool>
+      </folder>
+      <folder path="0/tests/tests/orm/database/connections">
+        <ccTool>
+          <incDir>
+            <pElem>/usr/dev/include</pElem>
+          </incDir>
+        </ccTool>
+      </folder>
+      <folder path="0/tests/tests/orm/database/connections/sqlite3">
+        <ccTool>
+          <incDir>
+            <pElem>../../../tests/tests/orm/database/connections/sqlite3</pElem>
+            <pElem>../../cmake</pElem>
+          </incDir>
+        </ccTool>
+      </folder>
+      <folder path="0/tests/tests/orm/database/connections/tests">
+        <ccTool>
+          <incDir>
+            <pElem>../../../tests/tests/orm/database/connections/tests/tuple</pElem>
+            <pElem>../../cmake</pElem>
+          </incDir>
+        </ccTool>
+      </folder>
+      <folder path="0/tests/tests/orm/database/sqlite3">
+        <ccTool>
+          <incDir>
+            <pElem>../../../tests/tests</pElem>
+            <pElem>../../cmake</pElem>
+          </incDir>
+        </ccTool>
+      </folder>
+      <folder path="Modules">
+        <cTool>
+          <incDir>
+            <pElem>../../cmake/CMakeFiles/CMakeTmp</pElem>
+          </incDir>
+        </cTool>
+        <ccTool>
+          <incDir>
+            <pElem>../../cmake/CMakeFiles/CMakeTmp</pElem>
+          </incDir>
+        </ccTool>
+      </folder>
+    </conf>
+  </confs>
+</configurationDescriptor>

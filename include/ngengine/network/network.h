@@ -1,0 +1,6 @@
+#ifndef NGENGINE_NETWORK_NETWORK_H
+#define	NGENGINE_NETWORK_NETWORK_H
+
+
+
+#endif
