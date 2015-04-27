@@ -30,13 +30,26 @@ bool BlocSender::write(const void *p, uint32_t size)
 {
   bool ret = false;
   
-  if(_size + _bloc_size <= _max_size) {
-    uint8_t *q = (uint8_t *) _mem;
-    q += _size;
-    std::memcpy(q, p, size);
-    _size += size;
+  if(_size + size > _max_size) {
+    uint32_t n = 0;
+    uint32_t size_min = _size + size;
+    
+    n = size_min / _bloc_size;
+    if(size_min % _bloc_size != 0)
+      n ++;
+    else;
+    
+    _mem = realloc(_mem, n * _bloc_size);
+    _max_size = n * _bloc_size;
   }
   
+  // copy the data
+  
+  uint8_t *q = (uint8_t *) _mem;
+  q += _size;
+  std::memcpy(q, p, size);
+  _size += size;
+
   return ret;
 }
 

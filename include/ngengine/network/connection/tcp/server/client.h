@@ -17,7 +17,7 @@ namespace server {
 
     public:
 
-      Client(const char *server_name, unsigned short port);
+      Client(int socket);
       ~Client();
       
       bool is_connected();
@@ -28,9 +28,6 @@ namespace server {
       int get_socket();
 
     private:
-
-      char *_server_name;
-      unsigned short _port;
 
       int _socket;
       struct sockaddr_in _server_sockaddr;

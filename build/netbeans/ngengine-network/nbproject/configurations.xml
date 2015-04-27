@@ -10,34 +10,6 @@
       <itemPath>/usr/share/cmake-2.8/Modules/CMakeCompilerABI.h</itemPath>
     </logicalFolder>
     <df root="../../.." name="0">
-      <df name="include">
-        <df name="ngengine">
-          <df name="network">
-            <df name="connection">
-              <df name="tcp">
-                <df name="client">
-                  <in>client.h</in>
-                </df>
-                <df name="server">
-                  <in>server.h</in>
-                </df>
-              </df>
-            </df>
-            <df name="serializer">
-              <df name="json">
-                <in>serializer.h</in>
-              </df>
-              <df name="raw">
-                <in>serializer.h</in>
-              </df>
-            </df>
-            <in>bloc_sender.h</in>
-            <in>client.h</in>
-            <in>entity.h</in>
-            <in>serializer.h</in>
-          </df>
-        </df>
-      </df>
       <df name="src">
         <df name="nge-orm-utils">
           <in>entity.cpp</in>
@@ -108,6 +80,9 @@
           <in>main.cpp</in>
         </df>
         <df name="tests">
+          <df name="entity">
+            <in>main.cpp</in>
+          </df>
           <df name="orm">
             <df name="database">
               <df name="connections">
@@ -176,6 +151,7 @@
             <standard>10</standard>
             <incDir>
               <pElem>../../../include</pElem>
+              <pElem>../../cmake/CMakeFiles/CMakeTmp</pElem>
             </incDir>
           </cTool>
           <ccTool>
@@ -183,46 +159,6 @@
           </ccTool>
         </makeTool>
       </makefileType>
-      <item path="../../../include/ngengine/network/bloc_sender.h"
-            ex="false"
-            tool="3"
-            flavor2="0">
-      </item>
-      <item path="../../../include/ngengine/network/client.h"
-            ex="false"
-            tool="3"
-            flavor2="0">
-      </item>
-      <item path="../../../include/ngengine/network/connection/tcp/client/client.h"
-            ex="false"
-            tool="3"
-            flavor2="0">
-      </item>
-      <item path="../../../include/ngengine/network/connection/tcp/server/server.h"
-            ex="false"
-            tool="3"
-            flavor2="0">
-      </item>
-      <item path="../../../include/ngengine/network/entity.h"
-            ex="false"
-            tool="3"
-            flavor2="0">
-      </item>
-      <item path="../../../include/ngengine/network/serializer.h"
-            ex="false"
-            tool="3"
-            flavor2="0">
-      </item>
-      <item path="../../../include/ngengine/network/serializer/json/serializer.h"
-            ex="false"
-            tool="3"
-            flavor2="0">
-      </item>
-      <item path="../../../include/ngengine/network/serializer/raw/serializer.h"
-            ex="false"
-            tool="3"
-            flavor2="0">
-      </item>
       <item path="../../../src/nge-orm-utils/entity.cpp"
             ex="false"
             tool="1"
@@ -247,37 +183,71 @@
       <item path="../../../src/ngengine/network/bloc_sender.cpp"
             ex="false"
             tool="1"
-            flavor2="0">
+            flavor2="8">
+        <ccTool flags="0">
+          <incDir>
+            <pElem>/usr/dev/include</pElem>
+            <pElem>../../../include</pElem>
+            <pElem>../../cmake</pElem>
+          </incDir>
+        </ccTool>
       </item>
       <item path="../../../src/ngengine/network/client.cpp"
             ex="false"
             tool="1"
-            flavor2="0">
+            flavor2="8">
+        <ccTool flags="0">
+          <incDir>
+            <pElem>/usr/dev/include</pElem>
+            <pElem>../../../include</pElem>
+            <pElem>../../cmake</pElem>
+          </incDir>
+        </ccTool>
       </item>
       <item path="../../../src/ngengine/network/connection/tcp/client/client.cpp"
             ex="false"
             tool="1"
-            flavor2="0">
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
       </item>
       <item path="../../../src/ngengine/network/connection/tcp/server/client.cpp"
             ex="false"
             tool="1"
-            flavor2="0">
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
       </item>
       <item path="../../../src/ngengine/network/connection/tcp/server/server.cpp"
             ex="false"
             tool="1"
-            flavor2="0">
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
       </item>
       <item path="../../../src/ngengine/network/entity.cpp"
             ex="false"
             tool="1"
-            flavor2="0">
+            flavor2="8">
+        <ccTool>
+          <incDir>
+            <pElem>../../../include</pElem>
+            <pElem>/usr/dev/include</pElem>
+            <pElem>../../cmake</pElem>
+          </incDir>
+        </ccTool>
       </item>
       <item path="../../../src/ngengine/network/network.cpp"
             ex="false"
             tool="1"
             flavor2="8">
+        <ccTool flags="0">
+          <incDir>
+            <pElem>/usr/dev/include</pElem>
+            <pElem>../../../include</pElem>
+            <pElem>../../cmake</pElem>
+          </incDir>
+        </ccTool>
       </item>
       <item path="../../../src/ngengine/orm/database/connection.cpp"
             ex="false"
@@ -400,6 +370,13 @@
         <ccTool flags="0">
         </ccTool>
       </item>
+      <item path="../../../tests/tests/entity/main.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
       <item path="../../../tests/tests/orm/database/connections/sqlite3/main.cpp"
             ex="false"
             tool="1"
@@ -509,6 +486,15 @@
           </incDir>
         </ccTool>
       </folder>
+      <folder path="0/tests/tests/entity">
+        <ccTool>
+          <incDir>
+            <pElem>/usr/dev/include</pElem>
+            <pElem>../../../tests/tests/entity</pElem>
+            <pElem>../../cmake</pElem>
+          </incDir>
+        </ccTool>
+      </folder>
       <folder path="0/tests/tests/orm/database/connections">
         <ccTool>
           <incDir>
@@ -541,11 +527,6 @@
         </ccTool>
       </folder>
       <folder path="Modules">
-        <cTool>
-          <incDir>
-            <pElem>../../cmake/CMakeFiles/CMakeTmp</pElem>
-          </incDir>
-        </cTool>
         <ccTool>
           <incDir>
             <pElem>../../cmake/CMakeFiles/CMakeTmp</pElem>

@@ -23,6 +23,10 @@ include_directories(
   /usr/dev/include/
 )
 
+link_directories(
+  /usr/dev/lib
+)
+
 add_library(ngengine-network STATIC ${orm_source_files})
 
 install(TARGETS ngengine-network
@@ -51,8 +55,9 @@ MACRO( TEST _target _target_folder )
   target_include_directories(${_target} PUBLIC ../../tests/tests/${_target_folder})
   
   target_link_libraries(${_target} ngengine-network)
-  target_link_libraries(${_target} sqlite3)
   target_link_libraries(${_target} ngengine-entity)
+  target_link_libraries(${_target} sqlite3)
+  target_link_libraries(${_target} pthread)
 
   add_custom_command(TARGET ${_target} POST_BUILD 
     COMMAND ${CMAKE_COMMAND} -E copy ${_target} ../../bin/tests/${_target_folder}/test
@@ -60,6 +65,7 @@ MACRO( TEST _target _target_folder )
 
 ENDMACRO( TEST )
 
+TEST(entity entity)
 
 # TEST RUNNER
 

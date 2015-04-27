@@ -23,10 +23,10 @@ namespace client {
       bool connect();
       bool is_connected();
       
-      virtual int32_t write(const void *p, unsigned int maxsize);
-      virtual int32_t read(void *p, unsigned int maxsize);
+      int32_t write(const void *p, unsigned int maxsize);
+      int32_t read(void *p, unsigned int maxsize);
       
-      int getSocket();
+      int get_socket();
 
     private:
 

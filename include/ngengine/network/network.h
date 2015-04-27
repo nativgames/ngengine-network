@@ -6,4 +6,8 @@
 
 #include <ngengine/entity/serializer/raw/serializer.h>
 
+#include <ngengine/network/connection/tcp/client/client.h>
+#include <ngengine/network/connection/tcp/server/server.h>
+#include <ngengine/network/connection/tcp/server/client.h>
+
 #endif
