@@ -15,7 +15,7 @@ namespace network {
   class BlocSender { // only resize if the size to send is > _max_size
   public:
     
-    BlocSender(AbstractClient *client, uint32_t bloc_size);
+    BlocSender(AbstractClient *client, uint32_t bloc_size, entity::Context *context);
     ~BlocSender();
     
     void clear();
@@ -28,6 +28,7 @@ namespace network {
   private:
     AbstractClient *_client;
     uint32_t _bloc_size;
+    entity::Context *_context;
     
     uint32_t _size;
     uint32_t _max_size;

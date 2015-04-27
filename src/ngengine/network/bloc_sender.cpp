@@ -6,14 +6,14 @@ using namespace nge;
 using namespace nge::entity;
 using namespace nge::network;
 
-BlocSender::BlocSender(AbstractClient *client, uint32_t bloc_size)
+BlocSender::BlocSender(AbstractClient *client, uint32_t bloc_size, entity::Context *context)
 {
   _client = client;
   _bloc_size = bloc_size;
   _size = bloc_size;
   _max_size = bloc_size;
   _mem = malloc(bloc_size);
-  
+  _context = context;
 }
 
 BlocSender::~BlocSender()
@@ -50,12 +50,19 @@ bool BlocSender::write(Entity &entity)
     ret = true;
 
     if(serializers->find(attr->type) != serializers->end()) {
+      // get the serializer for this attribute
       serializer = serializers->at(attr->type);
       
       ::nge::entity::serializer::raw::RawBuffer *buf = new 
         ::nge::entity::serializer::raw::RawBuffer();
-      
+      // serialize
       serializer->serialize(entity.__get(attr->name), buf);
+      // add the size only if needed
+      //if(buf->variable_size == true) {
+        this->write(&buf->size, sizeof(uint32_t));
+      //}
+      // write the data
+      this->write(buf->data, buf->size);
       
       delete buf;
     }
@@ -84,5 +91,25 @@ bool BlocSender::send()
 
 Entity *BlocSender::get(entity::EntityDefinition &entity_def)
 {
-  return nullptr;
+  Entity *entity = (entity_def.get_factory())();
+  std::map<uint32_t, entity::AbstractSerializer *> * serializers = _context->get_serializers();
+  entity::AbstractSerializer *serializer;
+  
+  for(auto attr : *(entity_def.get_attributes()) ) {
+    if(serializers->find(attr->type) != serializers->end()) {
+      // get the serializer for this attribute
+      serializer = serializers->at(attr->type);
+      
+      ::nge::entity::serializer::raw::RawBuffer *buf = new 
+        ::nge::entity::serializer::raw::RawBuffer();
+      
+      _client->read(&(buf->size), sizeof(uint32_t));
+      buf->data = malloc(buf->size);
+      _client->read(buf->data, buf->size);
+      
+      serializer->decode(buf, entity->__get(attr->name));
+    }
+  }
+  
+  return entity;
 }
