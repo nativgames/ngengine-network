@@ -32,6 +32,8 @@ install(TARGETS ngengine-network
 
 install(DIRECTORY ../../include/ngengine DESTINATION /usr/dev/include)
 
+install(DIRECTORY ../../include/ngengine DESTINATION /usr/dev/include)
+
 add_custom_command(TARGET ngengine-network POST_BUILD 
   COMMAND ${CMAKE_COMMAND} -E copy libngengine-network.a ../../bin/libngengine-network.a
 )
@@ -50,6 +52,7 @@ MACRO( TEST _target _target_folder )
   
   target_link_libraries(${_target} ngengine-network)
   target_link_libraries(${_target} sqlite3)
+  target_link_libraries(${_target} ngengine-entity)
 
   add_custom_command(TARGET ${_target} POST_BUILD 
     COMMAND ${CMAKE_COMMAND} -E copy ${_target} ../../bin/tests/${_target_folder}/test

@@ -10,20 +10,6 @@
       <itemPath>/usr/share/cmake-2.8/Modules/CMakeCompilerABI.h</itemPath>
     </logicalFolder>
     <df root="../../.." name="0">
-      <df name="build">
-        <df name="cmake">
-          <df name="CMakeFiles">
-            <df name="2.8.12.2">
-              <df name="CompilerIdC">
-                <in>CMakeCCompilerId.c</in>
-              </df>
-              <df name="CompilerIdCXX">
-                <in>CMakeCXXCompilerId.cpp</in>
-              </df>
-            </df>
-          </df>
-        </df>
-      </df>
       <df name="include">
         <df name="ngengine">
           <df name="network">
@@ -45,7 +31,10 @@
                 <in>serializer.h</in>
               </df>
             </df>
+            <in>bloc_sender.h</in>
             <in>client.h</in>
+            <in>entity.h</in>
+            <in>serializer.h</in>
           </df>
         </df>
       </df>
@@ -68,7 +57,9 @@
                 </df>
               </df>
             </df>
+            <in>bloc_sender.cpp</in>
             <in>client.cpp</in>
+            <in>entity.cpp</in>
             <in>network.cpp</in>
           </df>
           <df name="orm">
@@ -192,6 +183,11 @@
           </ccTool>
         </makeTool>
       </makefileType>
+      <item path="../../../include/ngengine/network/bloc_sender.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
       <item path="../../../include/ngengine/network/client.h"
             ex="false"
             tool="3"
@@ -203,6 +199,16 @@
             flavor2="0">
       </item>
       <item path="../../../include/ngengine/network/connection/tcp/server/server.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="../../../include/ngengine/network/entity.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="../../../include/ngengine/network/serializer.h"
             ex="false"
             tool="3"
             flavor2="0">
@@ -238,6 +244,11 @@
         <ccTool flags="0">
         </ccTool>
       </item>
+      <item path="../../../src/ngengine/network/bloc_sender.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
       <item path="../../../src/ngengine/network/client.cpp"
             ex="false"
             tool="1"
@@ -254,6 +265,11 @@
             flavor2="0">
       </item>
       <item path="../../../src/ngengine/network/connection/tcp/server/server.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="../../../src/ngengine/network/entity.cpp"
             ex="false"
             tool="1"
             flavor2="0">
@@ -425,16 +441,6 @@
             flavor2="8">
         <ccTool flags="0">
         </ccTool>
-      </item>
-      <item path="../../cmake/CMakeFiles/2.8.12.2/CompilerIdC/CMakeCCompilerId.c"
-            ex="false"
-            tool="0"
-            flavor2="0">
-      </item>
-      <item path="../../cmake/CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.cpp"
-            ex="false"
-            tool="1"
-            flavor2="0">
       </item>
       <item path="/usr/share/cmake-2.8/Modules/CMakeCCompilerABI.c"
             ex="false"
