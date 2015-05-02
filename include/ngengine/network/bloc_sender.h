@@ -25,6 +25,17 @@ namespace network {
     bool send();
     entity::Entity *get(entity::EntityDefinition &entity_def);
     
+    // --
+    
+    void *get_mem();
+    uint32_t get_size();
+    uint32_t get_max_size();
+    uint32_t get_bloc_size();
+    
+    // ---
+    
+    void dump();
+    
   private:
     AbstractClient *_client;
     uint32_t _bloc_size;
